@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<style>
+		#big_div{
+			width: 600px;
+			height: 440px;
+			border:1px solid black;
+			background-color: #50CF9D;
+			
+
+		}
+		#in_1{
+			margin-top: 60px;
+			margin-left:10px;
+			width: 570px;
+			height: 70px;
+			border:1px solid blue;
+
+		}
+		#enter{
+			width: 300px;
+			height: 40px;
+			margin-left: 20px;
+			margin-top: 30px;
+
+		}
+		#button{
+			width: 150px;
+			height: 40px;
+			margin-left: 20px;
+			margin-top: 30px;
+
+		}
+		.ipu{
+			background-color: green;
+			display: inline-block;
+			font-size: 30px;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+		#rrr{
+			text-align: center;
+			color: #00ff0f;
+		}
+	</style>
+</head>
+<body>
+	<div id="big_div">
+		<input  id="enter" type="text" name="enter">
+		<input id="button" type="button" name="button" value="calculate" onclick="cal()">
+		<br>
+		<div id="in_1"></div>
+		
+		<div id="opu"></div>
+	</div>
+	<script>
+		var n=0;
+		var sum=0;
+		var average=0;
+		var	minimum=99999999999999999999999999;
+		var maximum=document.getElementById('enter').value;
+		function cal(){
+			x=document.getElementById('enter').value;
+			if (x>0) {
+			n+=1;
+			sum =parseInt(sum)+parseInt(x);
+			average=sum/n;
+			if (x<minimum){minimum=x;}
+			if (x>=maximum){maximum=x;}
+			console.log(minimum);
+			document.getElementById('enter').value="";
+			document.getElementById("in_1").innerHTML+=("<div class='ipu'>"+x+"</div>");
+			}
+			else {
+				document.getElementById('opu').innerHTML+=("<h3 class='rrr'>"+"SUM :"+sum+"</h3>")
+				document.getElementById('opu').innerHTML+=("<h3 class='rrr'>"+"AVERAGGE :"+average+"</h3>")
+				document.getElementById('opu').innerHTML+=("<h3 class='rrr'>"+"MAXUMUM :"+maximum+"</h3>")
+				document.getElementById('opu').innerHTML+=("<h3 class='rrr'>"+"MINIMUM :"+minimum+"</h3>")
+			}
+		}
+	</script>
+</body>
+</html>

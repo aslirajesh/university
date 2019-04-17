@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mental Math</title>
+	<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="big_box">
+		<div id="box">
+			<form>
+			<input id="range" type="range" value="10" min="10" max="50" step="5"  onchange="showVal(this.value)">
+				<br>
+				<input id="Addition" class="op" type="radio" name="operator" value="+" checked="true" onchange="showVal(limit)">Addition
+				<br>
+				<input id="Subtraction" class="op" type="radio" name="operator" value="-" onchange="showVal(limit)">Subtraction
+				<br>
+				<input id="Multiplication" class="op" type="radio" name="operator" value="*" onchange="showVal(limit)">Multiplication
+				<br>
+				<input id="Multiplication" class="op" type="radio" name="operator" value="/" onchange="showVal(limit)">Division
+			</form>
+		</div>
+		<div id="t_box">
+			<h4 id="h4">Time Left</h4>
+			<div id="time_box">10</div>
+		</div>
+		<div id="ln"></div>
+		<div id="question_box"></div>
+		<input id="y_answer" type="text" name="y_answer" onclick="timer()" oninput="checkValue()" onchange="checkValue()">
+		
+		<input id="play" type="button" name="play" value="Play Again" onclick="location.reload()">
+	</div>
+	<script type="text/javascript">
+		// generating default limit
+		var limit=document.getElementById('range').value;
+
+		// default generate number
+		showVal(limit)
+
+		// generating random number
+
+		function showVal(limit) {
+			for(i=0;i<4;i++){
+				if(document.getElementsByClassName('op')[i].checked){
+					var operator=(document.getElementsByClassName('op')[i].value)
+				}
+			}
+			var a=Math.round(Math.random()*limit);
+			var b=Math.round(Math.random()*limit);
+			s_i_b=(a+"  "+operator+"  "+b);
+			document.getElementById('question_box').innerHTML=s_i_b;
+		}
+		
+		time=10;
+		function timer(){
+			if (time>0) {
+				document.getElementById('time_box').innerHTML=time;
+				setTimeout(timer,1000);
+				var w=28*time;
+				document.getElementById('ln').style.width=28*time-28+"px";
+				time--;
+				if (time==0) {
+					document.getElementById('h4').innerHTML="Your Score"
+					document.getElementById('time_box').innerHTML=ans;
+					document.getElementById('question_box').style.display='none';
+					document.getElementById('y_answer').style.display='none';
+					document.getElementById('play').style.display='block';
+				}
+			}
+		}
+		var ans=0;
+		function checkValue(){
+			var Tresult=eval(s_i_b);
+			var Yresult=document.getElementById('y_answer').value;
+			if (Tresult==Yresult) {
+				ans+=5;
+				time=time+2;
+				showVal(limit);
+				document.getElementById('y_answer').value=""
+			}
+		}
+	</script>
+</body>
+</html>

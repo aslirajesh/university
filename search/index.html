@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Box</title>
+	<style type="text/css">
+		html{
+			width:100%;
+			height:100%;
+		}
+		body{
+			width:100%;
+			height:100%;
+			background-color: #26EAC4;
+		}
+		#holder{
+			width: 60%;
+			height: 60px;
+			font-size: 25px;
+			background-color: #DCDDDD;
+			margin-left: 20%;
+			overflow: hidden;
+
+
+
+		}
+		#searchbox{
+			width: 59.3%;
+			height: 40px;
+			font-size: 25px;
+			margin-left: 20%;
+			padding-left: 10px;
+		}
+		#suggest{
+			width: 60%;
+			max-height: 210px;
+			font-size: 25;
+			margin-left: 20%;
+			font-size: 20px;
+			overflow-y: scroll;
+			padding-left: 10px;
+		}
+		#suggest :hover{
+			background-color: #D9EA26;
+			
+		}
+		.search{
+			border: 1px solid black;
+			max-width:200px;
+			height: 22px;
+			padding-left: 5px;
+			background-repeat: no-repeat;
+			display: inline-block;
+			margin-left: 5px;
+			overflow: hidden;
+			border-radius: 10px;
+			font-size: 18px;
+
+		}
+		.search img{
+			float: right;
+		}
+	</style>
+</head>
+<body onclick="closeWindow()">
+	<div id="holder"></div>
+	<input id="searchbox" type="text" name="searchbox" oninput="ser()"  placeholder="Search here">
+	<div id="suggest"></div>
+	
+
+	<script type="text/javascript">
+		var list=["untitled","document","type","name","new","folder","while","assignment","testing","slide",
+		"abusive","hover","over","java","javascript","tamil","english","hindi","sanskrit","singlish",
+		"french","laptop","wire","switch","data","data cable","speaker","mobile","charger","adapter",
+		"consructor","goat","lion","cat","dog","tiger","cheetah","leopard","donkey","buffalo",
+		"cow","apple","orange","goat","banana","mango","leaves","cherry","pulp","mint",
+		"frog","honey","rat","html","google","yahoo","css","zoho","docs","zohomail",
+		"king","queen","knight","bishop","rook","pawn","mankind","discovery","movie","songs",
+		"zohomail","zohodocs","zohosheet","zohoconnect","zohocalendar","zohopeople","zohoone","manageengine","WEBNMS","stylesheet",
+		"python","java","c-programme","pearl","ruby","php","sql","ios","android","jeep",
+		"datson","swift","ferrari","jaguar","toyota","AUDI","hyundai","bajaj","duke","aparche",
+		"ducati","KTM","splender","Royal-n field","duo","pept","cricket","football","hockey","badminton",
+		"tennis","kabadi","chess","carrom","table tennis","kho kho","volley ball","swimming","boxing","gun fire"];
+
+		function closeWindow(){
+
+			if(suggestionWindow){
+				//alert("hi");
+				document.getElementById('suggest').innerHTML = "";
+				document.getElementById('suggest').style.border = "none";
+				suggestionWindow = false;
+			}
+		}
+		function ser(){
+			document.getElementById("suggest").innerHTML="";
+			document.getElementById('suggest').style.border='0px solid black';
+			var val=document.getElementById('searchbox').value;
+			if(val!=""){
+				document.getElementById('suggest').style.border='1px solid black';
+				var j=0;
+				suggestionWindow = true;
+				for (var i = 0; i < list.length; i++) {
+					
+					s_wd=list[i];
+					
+					if(s_wd.startsWith(val)){
+						document.getElementById("suggest").innerHTML += "<div id=suge"+j+" onclick=adds("+j+")>"+s_wd+"</div>"
+						j++;
+					}
+				}
+			}
+		}
+		var suggestionWindow = false;
+		function adds(jj){
+			
+			console.log(jj);
+			var word=document.getElementById('suge'+jj).innerHTML;
+			document.getElementById('holder').innerHTML+="<div class=search onclick=this.remove()><img src=icons8-delete.svg>"+word+"</div>";
+			
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>transition</title>
+	<style>
+		#img_box{
+			margin-left: 60%;
+			margin-top: 10%;
+		}
+		
+		.img{
+			position:absolute;
+			height: 500px;
+			width:400px;
+			transition: 1s;
+			
+		}
+		#img_box:hover  #cat1{
+			transform:rotateZ(-20deg);
+			transform-origin: left bottom;
+		}
+		#img_box:hover  #cat2{
+			transform:rotateZ(-10deg);
+			transform-origin: left bottom;
+		}
+		#img_box:hover  #cat3{
+			transform:rotateZ(0deg);
+			transform-origin: left bottom;
+		}
+		#img_box:hover  #cat4{
+			transform:rotateZ(10deg);
+			transform-origin: left bottom;
+		}
+		#img_box:hover  #cat5{
+			transform:rotateZ(20deg);
+			transform-origin: left bottom;
+		}
+		#img_box:hover #cat1:hover{
+			transform:scale(1.2,1.2) rotateZ(-20deg);
+			z-index: 1;
+		}
+		#img_box:hover #cat2:hover{
+			transform:scale(1.2,1.2) rotateZ(-10deg);
+			z-index: 1;
+		}
+		#img_box:hover #cat3:hover{
+			transform:scale(1.2,1.2) rotateZ(0deg);
+			z-index: 1;
+		}
+		#img_box:hover #cat4:hover{
+			transform:scale(1.2,1.2) rotateZ(10deg);
+			z-index: 1;
+		}
+		#img_box:hover #cat5:hover{
+			transform:scale(1.2,1.2) rotateZ(20deg);
+			z-index: 1;
+		}
+		#four_square{
+			width: 200px;
+			height: 200px;
+			margin-left: 100px;
+		}
+		.square{
+			width: 100px;
+			height: 100px;
+			transition: 1s;
+		}
+		#sq1{
+			float:left;
+			background-color: red;
+		}
+		#sq2{
+			float:left;
+			background-color: green;
+		}
+		#sq3{
+			float:left;
+			background-color: blue;
+		}
+		#sq4{
+			float:left;
+			background-color: yellow;
+		}
+		#four_square:hover #sq1{
+			transform: rotateZ(90deg);
+			transform-origin: top left;
+		}
+		#four_square:hover #sq2{
+			transform: rotateZ(-90deg);
+			transform-origin: top right;
+		}
+		#four_square:hover #sq3{
+			transform: rotateZ(-90deg);
+			transform-origin: bottom left;
+		}
+		#four_square:hover #sq4{
+			transform: rotateZ(90deg);
+			transform-origin: bottom right;
+		}
+
+		#big_square{
+			position: relative;
+			width:400px;
+			height: 400px;
+			margin-left: 300px;
+			overflow: hidden;
+			transition: 0.5s;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="img_box">
+		<img id="cat1" class="img" src="cat-sweet-kitty-animals-57416.jpeg">
+		<img id="cat2" class="img" src="pexels-photo-236230.jpeg">
+		<img id="cat3" class="img" src="pexels-photo-127028.jpeg">
+		<img id="cat4" class="img" src="kitty-cat-kitten-pet-45201.jpeg">
+		<img id="cat5" class="img" src="pexels-photo-533083.jpeg">
+	</div>
+	<div id="four_square">
+		<div class="square" id="sq1"></div>
+		<div class="square" id="sq2"></div>
+		<div class="square" id="sq3"></div>
+		<div class="square" id="sq4"></div>
+	</div>
+</body>
+</html>

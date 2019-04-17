@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>template1</title>
+	<meta charset="utf-8">
+	<style>
+		body{
+			background-color: #B2C78F;
+		}
+		#big_div{
+			position: relative;
+			height: 700px;
+			width: 60%;
+			border: 1px solid black;
+			border-radius: 20px;
+			background-image: url(pexels-photo-414635.jpeg);
+			background-size: cover;
+		}
+		#form_div{
+			position: absolute;
+			top:5%;
+			width: 45%;
+			height: 90%;
+			margin-left: 8%;
+			background-color: rgba(255, 255, 255,0.8);
+			border-radius:20px;
+		}
+		#kafe{
+			font-style: italic;
+			margin-left: 10%;
+			margin-top: 5%;
+		}
+		h1{
+			margin-left: 10%;
+			margin-top: 15%;
+			font-size: 45px;
+			padding: 0px;
+		}
+		p{
+			margin-left: 10%;
+			padding: 0px;
+			margin-top: -7%;
+		}
+		input{
+			width:80%;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-bottom: 5%;
+			padding-left: 5%;
+			height: 30px;
+			border: none;
+			font-size: 20px;
+			border-bottom: 1px solid black;
+			background-color:rgba(255, 255, 255,0);
+		}
+		input:focus{
+			outline: 0;
+		}
+		#submit{
+			width:30%;
+			color: white;
+			margin-top: 10%;
+			background-color: #3498DB;
+		}
+		h5{
+			margin-left: 10%;
+			margin-top: -4%;
+		}
+	</style>
+</head>
+<body>
+	<div id="big_div">
+		<div id="form_div">
+			<h3 id="kafe">Kaffetorst</h3>
+			<h1>Hello there.</h1>
+			<p>You need an account to continue</p>
+			<form>
+				<input type="text" name="name" placeholder="Full Name">
+				<br>
+				<input type="email" name="email" placeholder="Email">
+				<br>
+				<input type="password" name="password" placeholder="Password">
+				<br>
+				<input type="password" name="password" placeholder="Repeat Password">
+				<br>
+				<br>
+				<input id="submit" type="submit" name="submit" value="Sign Up">
+			</form>
+			<h5>By Sign Up You are agree to our <a href="#">term  & condition</a></h5>
+
+		</div>
+	</div>
+</body>
+</html>

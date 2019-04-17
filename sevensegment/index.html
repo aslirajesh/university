@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>seven segment</title>
+	<style type="text/css">
+		#segment{
+			height: 400px;
+			width: 360px;
+			background-color:black;
+			border: 1px solid green;
+			position: absolute;
+			margin-left: 500px;
+			top: 100px;
+			left: 5%;
+		}
+		.segh{
+			border: 1px solid black;
+			height: 10px;
+			width: 150px;
+			position: absolute;
+			background-color: rgb(20, 20, 20);
+		}
+		.segv{
+			border: 1px solid black;
+			height: 150px;
+			width: 10px;
+			background-color: rgb(20, 20, 20);
+			position: absolute;
+		}
+		#seg1{
+			top: 31px;
+			left:103px;
+
+		}
+		#seg2{
+			top: 42px;
+			left:254px;
+			
+		}
+		#seg3{
+			top: 204px;
+			left:254px;
+			
+		}
+		#seg4{
+			top:355px; 
+			left:103px;
+			
+		}
+		#seg5{
+			top: 204px;
+			left:92px;
+			
+		}
+		#seg6{
+			top: 42px;
+			left:92px;
+			
+		}
+		#seg7{
+			top: 193px;
+			left:103px;
+			
+		}
+		#num{
+			height: 40px;
+			width: 200px;
+			position: absolute;
+			margin-left: 510px;
+			border-radius: 20px;
+			top: 550px;
+			left: 170px;
+			text-align: center;
+			font-size: 25px;
+			outline: none;
+		}
+		#click{
+			height: 40px;
+			width: 90px;
+			background-color: #48DEC3;
+			margin-left: 500px;
+			border-radius: 15px;
+			position: absolute;
+			top: 620px;
+			left: 225px;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="segment">
+		<div id="seg1" class="segh"></div>
+		<div id="seg2" class="segv"></div>
+		<div id="seg3" class="segv"></div>
+		<div id="seg4" class="segh"></div>
+		<div id="seg5" class="segv"></div>
+		<div id="seg6" class="segv"></div>
+		<div id="seg7" class="segh"></div>
+	</div>
+	<input type="text" placeholder="enter no" id="num" name="">
+	<input type="button" value="click" id="click" onclick="colour()" name="">
+</body>
+<script type="text/javascript">
+	var array=[[1,2,3,4,5,6],[2,3],[1,2,4,5,7],[1,2,3,4,7],[2,3,6,7],[1,3,4,6,7],[1,3,4,5,6,7],[1,2,3],[1,2,3,4,5,6,7],[1,2,3,4,6,7]]
+
+	function colour() {
+		var a=document.getElementById('num').value;
+		var b=array[a];
+		for(var i=1; i<=7; i++){
+			document.getElementById('seg'+i).style.backgroundColor="rgb(15, 15, 15)";
+		}
+		for(var i=0; i<=b.length-1; i++){
+			document.getElementById('seg'+b[i]).style.backgroundColor="red";
+		}
+		document.getElementById('num').value="";
+	}
+</script>
+</html>

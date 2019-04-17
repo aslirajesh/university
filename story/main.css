@@ -1,0 +1,71 @@
+body{
+	background-color:#ECF0F1;
+	padding:0px;
+	}
+#box1{
+	border:1px solid black;
+	width:50%;
+	height:950px;
+	position:relative;
+	top:0px;
+	left:0px;
+	}
+#box2{
+	border:1px solid black;
+	margin:10px;
+	width:48%;
+	height:920px;
+	position:absolute;
+	left:50%;
+	top:0px;
+	padding:14px;
+	}
+h1{
+	text-align:center;
+	background-color:#F7DC6F;
+	padding-top:20px;
+	padding-bottom:20px;
+	margin-top:0px;
+	}
+#img-01{
+	height:330px;
+	width:70%;
+	padding-left:15%;
+	}
+#section-1{
+	//border:1px solid green;
+	width:48%;
+	height:480px;
+	margin-left:10px;
+	margin-top:-8px;
+	}
+#section-2{
+	//border:1px solid green;
+	width:48%;
+	height:480px;
+	position:absolute;
+	left:51%;
+	top:48%;
+	}
+#img-02{
+	float:right;
+	margin:10px;
+	}
+#img-03{
+	float:left;
+	margin-right:10px;
+	}
+#img-05{
+	float:right;
+	margin:10px;
+	}
+#v{
+	font-size:60px;
+	}
+p{
+	font-size:25px;
+	}
+#sikh{
+	color:blue;
+	}
+

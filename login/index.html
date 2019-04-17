@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login form</title>
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Niconne" rel="stylesheet">
+	<style>
+		body{
+			background-color: #706F68;
+		}
+		span{
+			color: red;
+		}
+		#big_square{
+			position: relative;
+			border: 1px solid black;
+			width: 460px;
+			height: 300px;
+			margin-top: 15%;
+			padding-left:30px;
+			padding-right: 30px;
+			background-color: white;
+		}
+		h2{
+			font-family: 'Courgette';
+			font-size: 35px;
+			margin-bottom: 0px;
+			margin-top: 10px;
+		}
+		p{
+			font-family: 'Courgette';
+		}
+		#user_icon, #pwd_icon{
+			position: absolute;
+			left: 30px;
+			border-right:2px dotted black; 
+
+		}
+		
+		#username,#pwd{
+			height: 30px;
+			width: 390px;
+			padding-left: 40px;
+		}
+		#check{
+			width: 20px;
+			height: 20px;
+			margin-top: 40px;
+		}
+		#login{
+			width: 120px;
+			height: 35px;
+			margin-left: 160px;
+			color: white;
+			background-color: red;
+		}
+		#u_required,#p_required{
+			position: absolute;
+			left: 440px;
+			margin-top: 15px;
+		}
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="big_square">
+		<h2>User login</h2>
+		<p><span id="hi">Hi there. </span>Login with your social network account to access our user area and great community!</p>
+		<img id="user_icon" src="if_user_male_172625.svg" height="35" width="35">
+		<img id="u_required" src="required.png">
+		<input id="username" type="text" name="username" value="USERNAME" onfocus="this.value='';" onblur="if(this.value=='') {this.value='USERNAME';}">
+		<br>
+		<br>
+		<img id="pwd_icon" src="if_lock-24_103178.svg" height="35" width="35">
+		<img id="p_required" src="required.png">
+		<input id="pwd" type="password" name="password" value="password" onfocus="this.value='';" onblur="if(this.value=='') {this.value='password';}">
+		<br>
+		<input id="check" type="checkbox" name="checkbox"><span>Keep me signed in</span>
+		<input id="login" type="submit" name="submit" value="Login">
+	</div>
+</body>
+</html>

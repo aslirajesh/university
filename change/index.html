@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change color</title>
+	<style type="text/css">
+		body{
+			background-color: #003344;
+		}
+		#text{
+			text-align: center;
+			color: #00df33;
+			font-size: 40px;
+			margin: 0;
+		}
+		#block{
+			position: fixed;
+			width:300px;
+			width:100%;
+			border:1px solid black;
+		}
+		#plus{
+			padding: 10px;
+			margin-left: 600px;
+			margin-top: 200px;
+		}
+		#minus{
+			padding: 10px;
+			margin-left: 100px;
+			margin-top: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+		 n=40;
+		function plus() {
+			n+=1;
+			document.getElementById('text').style.fontSize=n+"px";
+		};
+		function minus(){
+			n-=1;
+			document.getElementById('text').style.fontSize=n+"px";
+		};
+		function change_c(){
+			r=Math.round(Math.random()*255);
+			g=Math.round(Math.random()*255);
+			b=Math.round(Math.random()*255);
+			color="rgb("+r+","+g+","+b+")";
+			document.body.style.backgroundColor=color;
+			console.log(color)
+		}
+	</script>
+</head>
+<body>
+	<div id="block">
+	<h1 id="text">This is an example to chanage font size</h1>
+	</div>
+	<input id="plus" type="button" name="plus" value="+" onclick="plus()">
+	<input id="minus" type="button" name="minus" value="-" onclick="minus()">
+	<input id="change" type="button" name="change" value="change color" onclick="change_c()">
+</body>
+</html>

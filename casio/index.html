@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>casio</title>
+	<meta charset="utf-8">
+	<style>
+		form{position: relative;
+			top:100px;
+			left:500px;
+			width: 390px;
+			background-color: #839493;
+		}
+		#screen{
+			width: 99%;
+			height: 100px;
+			font-size: 50px;
+			color:white;
+			text-align: right;
+			background-color: #AFBBBA;
+		}
+		.submited{
+			padding: 35px;
+			margin-left: 1px;
+			background-color: #839493;
+			border: none;
+			color: #15635D;
+			font-size: 30px;
+			outline: none;
+		}
+		#add{
+			color: #9B0A38;
+		}
+		.submited:hover{
+			background-color: #AFBBBA;
+		}
+	</style>
+</head>
+<body>
+		<form>
+			<input id="screen" type="text" name="screen" disabled>
+			<br>
+			<input type="button" name="c" value="c" class="submited" onclick="screen.value=''">
+			<input type="button" name="root" value="√" class="submited" onclick="screen.valueh=Math.sqrt(screen.value)">
+			<input type="button" name="%" value="←" class="submited" onclick="screen.value=screen.value.slice(0,-1)">
+			<input type="button" name="/" value="/" class="submited" onclick="screen.value+='/'" id="add">
+			<br>
+			<input type="button" name="7" value="7" class="submited" onclick="screen.value+='7'">
+			<input type="button" name="8" value="8" class="submited" onclick="screen.value+='8'">
+			<input type="button" name="9" value="9" class="submited" onclick="screen.value+='9'">
+			<input type="button" name="*" value="*" class="submited" onclick="screen.value+='*'" id="add">
+			<br>
+			<input type="button" name="4" value="4" class="submited" onclick="screen.value+='4'">
+			<input type="button" name="5" value="5" class="submited" onclick="screen.value+='5'">
+			<input type="button" name="6" value="6" class="submited" onclick="screen.value+='6'">
+			<input type="button" name="-" value="-" class="submited" onclick="screen.value+='-'" id="add">
+			<br>
+			<input type="button" name="1" value="1" class="submited" onclick="screen.value+='1'">
+			<input type="button" name="2" value="2" class="submited" onclick="screen.value+='2'">
+			<input type="button" name="3" value="3" class="submited" onclick="screen.value+='3'">
+			<input type="button" name="+" value="+" class="submited" onclick="screen.value+='+'" id="add">
+			<br>
+			<input type="button" name="0" value="0" class="submited" onclick="screen.value+='0'">
+			<input type="button" name="00" value="00" class="submited" onclick="screen.value+='00'">
+			<input type="button" name="." value="." class="submited" onclick="screen.value+='.'">
+			<input type="button" name="=" value="=" class="submited" onclick="screen.value=eval(screen.value)" id="add">
+		</form>
+</body>
+</html>

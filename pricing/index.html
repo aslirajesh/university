@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pricing table</title>
+	<style>
+		body{
+			padding: 0px;
+			margin: 0px;
+			
+		}
+		.pricing_plan{
+			position: relative;
+			border:1px solid black;
+			width: 25%;
+			height: 30vw;
+			border-radius: 20px;
+			border-bottom: 2px solid #EC5201;
+			display: inline-block;
+			box-shadow: -7px 10px 40px black;
+			margin-top: 5%;
+			margin-left:3%;
+			overflow: hidden;
+			text-align: center;
+		}
+		#all{
+			margin-left: 20%
+		}
+		#head_div1,#head_div2,#head_div3{
+			position: absolute;
+			border-bottom: 1px solid black;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			height: 30%;
+			width: 100%;
+			text-align: center;
+		}
+		#head_div1{
+			background-color: #48178A;
+		}
+		#head_div2{
+			background-color: #181121;
+		}
+		#head_div3{
+			background-color: #1995B3;
+		}
+		h1{
+			color: white;
+		}
+		#head_div1 h2{
+			color: yellow;
+		}
+		#head_div2 h2{
+			color: #EC5201;
+		}
+		#head_div3 h2{
+			color: #02DD91;
+		}
+		span{
+			color:rgba(208, 211, 212,0.7);
+		}
+		#new1,#new2,#new3{
+			position: absolute;
+			width: 100%;
+			margin-left: 43%;
+			padding-top:8%;
+			padding-bottom: 3%;
+			font-style: bold;
+			transform: rotateZ(40deg);
+		}
+		#new1{
+			background-color: yellow;
+		}
+		#new2{
+			background-color: #EC5201;
+		}
+		#new3{
+			background-color: #02DD91;
+		}
+		hr{
+			position: relative;
+			top: 28.5%;
+		}
+		.detail{
+			position: relative;
+			top:27%;
+		}
+		.detail div{
+			padding: 16px;
+		}
+		.detail div:nth-child(odd){
+			background-color:#AAB7B8;
+		}
+		.detail div:nth-child(6){
+			border-bottom: 1px solid #AAB7B8;
+		}
+		input{
+			position: absolute;
+			top: 87%;
+			left: 20%;
+			width: 60%;
+			height: 8%;
+			color: white;
+		}
+		
+		#buy1{
+			background-color:#48178A;
+			transition: 1s; 
+		}
+		#buy2{
+			background-color:#181121;
+			transition: 1s;
+		}
+		#buy3{
+			background-color:#1995B3;
+			transition: 1s; 
+		}
+		#pricing_plan1:hover{
+			transform: scale(1.1,1.2);
+		}
+		#pricing_plan1:hover .detail{
+			color: #48178A;
+		}
+		#pricing_plan1:hover #buy1{
+			background-color: #959525;
+			border: 2px solid #48178A;
+		}
+		#pricing_plan2:hover{
+			transform: scale(1.1,1.2);
+		}
+		#pricing_plan2:hover .detail{
+			color: #EC5201;
+		}
+		#pricing_plan2:hover #buy2{
+			background-color: #EC5201;
+			border: 2px solid #181121;
+		}
+		#pricing_plan3:hover{
+			transform: scale(1.1,1.2);
+		}
+		#pricing_plan3:hover .detail{
+			color: #1995B3;
+		}
+		#pricing_plan3:hover #buy3{
+			background-color: #02DD91;
+			border: 2px solid #1995B3;
+		}
+	</style>
+</head>
+<body>
+	<div id="all">
+	<div class="pricing_plan" id="pricing_plan1">
+		<div id="head_div1">
+			<h1>BASIC</h1>
+			<h2>₹ 199 <span>/month</span></h2>
+		</div>
+		<div id="new1">
+			New
+		</div>
+		<hr color="yellow" width="100%">
+		<div class="detail">
+			<div>5GB Disk Space</div>
+			<div>10 Domain names</div>
+			<div>5 E-mail address</div>
+			<div>50GB Monthly Bandwith</div>
+			<div>Fully Support</div>
+			<div>Custom design</div>
+		</div>
+		<input id="buy1" type="submit" name="buy" value="Purchase">
+	</div>
+	<div class="pricing_plan" id="pricing_plan2">
+		<div id="head_div2">
+			<h1>STANDARD</h1>
+			<h2>₹ 399 <span>/month</span></h2>
+		</div>
+		<div id="new2">
+			Popular
+		</div>
+		<hr color="#EC5201" width="100%">
+		<div class="detail">
+			<div>10GB Disk Space</div>
+			<div>20 Domain names</div>
+			<div>10 E-mail address</div>
+			<div>100GB Monthly Bandwith</div>
+			<div>Fully Support</div>
+			<div>Custom design</div>
+		</div>
+		<input id="buy2" type="submit" name="buy" value="Purchase">
+	</div>
+	<div class="pricing_plan" id="pricing_plan3">
+		<div id=head_div3>
+			<h1>PREMIUM</h1>
+			<h2>₹ 599 <span>/month</span></h2>
+		</div>
+		<div id="new3">
+			New
+		</div>
+		<hr color="#02DD91" width="100%">
+		<div class="detail">
+			<div>50GB Disk Space</div>
+			<div>50 Domain names</div>
+			<div>20 E-mail address</div>
+			<div>300GB Monthly Bandwith</div>
+			<div>Fully Support</div>
+			<div>Custom design</div>
+		</div>
+		<input id="buy3" type="submit" name="buy" value="Purchase">
+	</div>
+</body>
+</html>
